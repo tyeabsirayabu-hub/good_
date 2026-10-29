@@ -1,0 +1,532 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Honey Foods Industry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf0;
+            color: #282016;
+            line-height: 1.7;
+        }
+
+        header {
+            background: oklab(15.711% 0.00043 0.02549);
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .logo {
+            color: #f5bd42;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #f5bd42;
+        }
+
+        .amharic {
+            display: block;
+            color: #a76b13;
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 3px;
+        }
+
+        nav .amharic {
+            color: #f5d991;
+            font-size: 12px;
+        }
+
+        .hero {
+            min-height: 430px;
+            padding: 85px 7%;
+            text-align: center;
+            background: linear-gradient(
+                rgba(25, 16, 5, 0.86),
+                rgba(25, 16, 5, 0.86)
+            );
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            color: #f5bd42;
+            font-size: clamp(32px, 5vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .hero .amharic {
+            color: #ffe4a3;
+            font-size: 17px;
+        }
+
+        .hero p {
+            margin: 12px 0;
+        }
+
+        .hero .tagline {
+            color: #ffe4a3;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            background: #f5bd42;
+            color: #211708;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .button .amharic {
+            color: #211708;
+        }
+
+        section {
+            padding: 60px 7%;
+            scroll-margin-top: 20px;
+        }
+
+        section:nth-of-type(even) {
+            background: #fff1d2;
+        }
+
+        .content {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .section-title {
+            color: #7b4a08;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+
+        .section-title .amharic {
+            font-size: 17px;
+        }
+
+        .intro {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        .product-category {
+            color: #7b4a08;
+            font-size: 23px;
+            margin-top: 30px;
+        }
+
+        .product-list,
+        .quality-list,
+        .service-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .product-list li,
+        .quality-list li,
+        .service-list li {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid #e5aa2c;
+            border-radius: 5px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+[10/27/2026 8:12 PM] Film Stor: .contact-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ecd8ad;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item h3 {
+            color: #80500d;
+            margin-bottom: 8px;
+        }
+
+        .contact-item a {
+            color: #80500d;
+        }
+
+        footer {
+            background: #17120b;
+            color: white;
+            text-align: center;
+            padding: 25px 7%;
+        }
+
+        footer .amharic {
+            color: #f5d991;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        
+        <span class="amharic"></span>
+    </div>
+
+    <nav>
+        <a href="#home">Home<span class="amharic">መነሻ</span></a>
+        <a href="#about">About<span class="amharic">ስለ እኛ</span></a>
+        <a href="#mission">Mission<span class="amharic">ተልዕኮ</span></a>
+        <a href="#vision">Vision<span class="amharic">ራዕይ</span></a>
+        <a href="#quality">Quality<span class="amharic">ጥራት</span></a>
+        <a href="#products">Products<span class="amharic">ምርቶች</span></a>
+        <a href="#contact">Contact<span class="amharic">ያግኙን</span></a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>
+        Golden Honey &amp; Gold Chips
+        <span class="amharic">ጎልደን ሃኒ እና ጎልድ ቺፕስ</span>
+    </h1>
+
+    <p>
+        Welcome to Golden Honey Foods Industry
+        <span class="amharic">ወደ ጎልደን ሃኒ የምግብ ኢንዱስትሪ እንኳን በደህና መጡ</span>
+    </p>
+
+    <p class="tagline">
+        Quality • Freshness • Food Safety • Customer Satisfaction
+        <span class="amharic">ጥራት • ትኩስነት • የምግብ ደህንነት • የደንበኛ እርካታ</span>
+    </p>
+
+    <a href="#products" class="button">
+        Explore Our Products
+        <span class="amharic">ምርቶቻችንን ይመልከቱ</span>
+    </a>
+</section>
+
+<section id="welcome">
+    <div class="content intro">
+        <h2 class="section-title">
+            Welcome to Our Company
+            <span class="amharic">ወደ ድርጅታችን እንኳን በደህና መጡ</span>
+        </h2>
+
+        <p>
+            Golden Honey Foods Industry is committed to providing quality
+            honey products and delicious potato chips to our customers.
+        </p>
+        <p class="amharic">
+            ጎልደን ሃኒ የምግብ ኢንዱስትሪ ጥራት ያላቸውን የማር ምርቶች
+            እና ጣፋጭ የድንች ቺፕሶችን ለደንበኞቹ ለማቅረብ ቁርጠኛ ነው።
+        </p>
+
+        <p>
+            We focus on product quality, hygienic production, customer
+            satisfaction, and continuous improvement.
+        </p>
+        <p class="amharic">
+            በምርት ጥራት፣ በንጽህና የተሞላ የምርት ሂደት፣ በደንበኛ እርካታ
+            እና በቀጣይነት ማሻሻያ ላይ እናተኩራለን።
+        </p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="content">
+        <h2 class="section-title">
+            About Us
+            <span class="amharic">ስለ እኛ</span>
+        </h2>
+
+        <p>
+            Golden Honey Foods Industry operates under NUUF Trading PLC
+            and focuses on producing honey products and potato chips.
+        </p>
+        <p class="amharic">
+            ጎልደን ሃኒ የምግብ ኢንዱስትሪ በNUUF Trading PLC ስር የሚሰራ
+            ሲሆን የማር ምርቶችን እና የድንች ቺፕሶችን በማምረት ላይ ያተኩራል።
+        </p>
+
+        <p>
+            Our goal is to deliver reliable products that meet customer
+            expectations while maintaining hygiene and quality throughout
+            our production processes.
+        </p>
+        <p class="amharic">
+            ዓላማችን በምርት ሂደታችን ውስጥ ንጽህናንና ጥራትን በመጠበቅ
+            የደንበኞችን ፍላጎት የሚያሟሉ አስተማማኝ ምርቶችን ማቅረብ ነው።
+        </p>
+    </div>
+</section>
+<section id="mission">
+    <div class="content">
+        <h2 class="section-title">
+            Our Mission
+            <span class="amharic">ተልዕኳችን</span>
+        </h2>
+
+        <p>
+            To produce and supply quality honey products and potato chips
+            through hygienic manufacturing, responsible operations, and
+            a commitment to customer satisfaction.
+        </p>
+        <p class="amharic">
+            በንጽህና የተሞላ የማምረት ሂደት፣ በኃላፊነት የሚከናወኑ ሥራዎች
+            እና ለደንበኛ እርካታ ባለን ቁርጠኝነት ጥራት ያላቸውን የማር ምርቶችና
+            የድንች ቺፕሶችን ማምረትና ማቅረብ።
+        </p>
+    </div>
+</section>
+
+<section id="vision">
+    <div class="content">
+        <h2 class="section-title">
+            Our Vision
+            <span class="amharic">ራዕያችን</span>
+        </h2>
+
+        <p>
+            To become a trusted food manufacturing company recognized
+            for product quality, food safety, innovation, and customer care.
+        </p>
+        <p class="amharic">
+            በምርት ጥራት፣ በምግብ ደህንነት፣ በፈጠራ እና በደንበኛ እንክብካቤ
+            የሚታወቅ ታማኝ የምግብ ማምረቻ ድርጅት መሆን።
+        </p>
+    </div>
+</section>
+
+<section id="quality">
+    <div class="content">
+        <h2 class="section-title">
+            Quality &amp; Food Safety
+            <span class="amharic">ጥራት እና የምግብ ደህንነት</span>
+        </h2>
+
+        <p>
+            We are committed to maintaining hygienic production practices,
+            monitoring product quality, and improving food safety procedures.
+        </p>
+        <p class="amharic">
+            ንጽህናን የጠበቀ የምርት አሠራርን ለመጠበቅ፣ የምርት ጥራትን
+            ለመቆጣጠር እና የምግብ ደህንነት ሂደቶችን ለማሻሻል ቁርጠኛ ነን።
+        </p>
+
+        <ul class="quality-list">
+            <li>
+                <strong>HACCP - Hazard Analysis and Critical Control Points</strong>
+                <span class="amharic">HACCP፦ የአደጋ ትንተና እና ወሳኝ የቁጥጥር ነጥቦች</span>
+                <p>Identifying and controlling potential food safety hazards.</p>
+                <p class="amharic">ሊከሰቱ የሚችሉ የምግብ ደህንነት አደጋዎችን መለየትና መቆጣጠር።</p>
+            </li>
+
+            <li>
+                <strong>GMP - Good Manufacturing Practices</strong>
+                <span class="amharic">GMP፦ ጥሩ የማምረት አሠራር</span>
+                <p>Maintaining cleanliness, proper handling, and organized production.</p>
+                <p class="amharic">ንጽህናን፣ ተገቢ አያያዝን እና የተደራጀ የምርት ሂደትን መጠበቅ።</p>
+            </li>
+
+            <li>
+                <strong>ISO 22000 - Food Safety Management System</strong>
+                <span class="amharic">ISO 22000፦ የምግብ ደህንነት አስተዳደር ሥርዓት</span>
+                <p>A framework for managing food safety throughout the food chain.</p>
+                <p class="amharic">በምግብ አቅርቦት ሰንሰለት ውስጥ የምግብ ደህንነትን ለማስተዳደር የሚረዳ ሥርዓት።</p>
+            </li>
+
+            <li>
+                <strong>Quality Control</strong>
+                <span class="amharic">የጥራት ቁጥጥር</span>
+                <p>Checking raw materials, production processes, and finished products.</p>
+                <p class="amharic">ጥሬ ዕቃዎችን፣ የምርት ሂደቶችን እና የተጠናቀቁ ምርቶችን መፈተሽ።</p>
+            </li>
+
+            <li>
+                <strong>Food Hygiene and Safety</strong>
+                <span class="amharic">የምግብ ንጽህና እና ደህንነት</span>
+                <p>Promoting safe food handling and hygienic working conditions.</p>
+                <p class="amharic">ደህንነቱ የተጠበቀ የምግብ አያያዝንና ንጹህ የሥራ አካባቢን ማስፋፋት።</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="products">
+    <div class="content">
+        <h2 class="section-title">
+            Our Products
+            <span class="amharic">ምርቶቻችን</span>
+        </h2>
+
+        <p class="intro">
+            We offer honey products in different sizes and delicious Gold Chips
+            to serve different customer needs.
+        </p>
+        <p class="amharic intro">
+            የተለያዩ የማር ምርቶችን በተለያዩ መጠኖች እና ጣፋጭ ጎልድ ቺፕሶችን
+            የደንበኞችን የተለያዩ ፍላጎቶች ለማሟላት እናቀርባለን።
+        </p>
+
+        <h3 class="product-category">
+            Golden Honey Products
+            <span class="amharic">የጎልደን ሃኒ ምርቶች</span>
+        </h3>
+ <ul class="product-list">
+            <li>100 g Honey Bottle<span class="amharic">100 ግራም የማር ጠርሙስ</span></li>
+            <li>500 g Honey Bottle<span class="amharic">500 ግራም የማር ጠርሙስ</span></li>
+            <li>500 g Premium Honey<span class="amharic">500 ግራም ፕሪሚየም ማር</span></li>
+            <li>500 g Squeeze Honey<span class="amharic">500 ግራም በመጭመቅ የሚወጣ ማር</span></li>
+            <li>1 kg Honey<span class="amharic">1 ኪሎ ግራም ማር</span></li>
+            <li>3 kg Honey<span class="amharic">3 ኪሎ ግራም ማር</span></li>
+            <li>5 kg Honey<span class="amharic">5 ኪሎ ግራም ማር</span></li>
+        </ul>
+
+        <h3 class="product-category">
+            Gold Chips
+            <span class="amharic">ጎልድ ቺፕስ</span>
+        </h3>
+
+        <ul class="product-list">
+            <li>Gold Chips - 65 g<span class="amharic">ጎልድ ቺፕስ - 65 ግራም</span></li>
+            <li>Gold Chips - 120 g<span class="amharic">ጎልድ ቺፕስ - 120 ግራም</span></li>
+            <li>Onion Flavor<span class="amharic">የሽንኩርት ጣዕም</span></li>
+            <li>Tomato Flavor<span class="amharic">የቲማቲም ጣዕም</span></li>
+            <li>Peri-Peri Flavor<span class="amharic">የበርበሬ ጣዕም</span></li>
+        </ul>
+
+        <h3 class="product-category">
+            Our Services
+            <span class="amharic">አገልግሎቶቻችን</span>
+        </h3>
+
+        <ul class="service-list">
+            <li>Honey Processing and Packaging<span class="amharic">የማር ማቀነባበር እና ማሸግ</span></li>
+            <li>Potato Chips Manufacturing<span class="amharic">የድንች ቺፕስ ማምረት</span></li>
+            <li>Product Quality Control<span class="amharic">የምርት ጥራት ቁጥጥር</span></li>
+            <li>Hygienic Production Practices<span class="amharic">ንጽህናን የጠበቀ የምርት አሠራር</span></li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="content">
+        <h2 class="section-title">
+            Contact Us
+            <span class="amharic">ያግኙን</span>
+        </h2>
+
+        <p class="intro">
+            Contact us for product information, business inquiries, and further details.
+        </p>
+        <p class="amharic intro">
+            ስለ ምርቶቻችን መረጃ፣ ለንግድ ጥያቄዎች እና ለተጨማሪ ዝርዝሮች ያግኙን።
+        </p>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Company Location<span class="amharic">የድርጅቱ አድራሻ</span></h3>
+                <p>Addis Ababa, Ethiopia</p>
+                <p class="amharic">አዲስ አበባ፣ ኢትዮጵያ</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Production Location<span class="amharic">የምርት ቦታ</span></h3>
+                <p>Kality Sub City, Addis Ababa, Ethiopia</p>
+                <p class="amharic">ኮየ ፈጨ ገራን ጉላ፣ አዲስ አበባ፣ ኢትዮጵያ</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Showroom<span class="amharic">የሽያጭ ማሳያ ቦታ</span></h3>
+                <p>Bole Luky Building, 6th Floor, Addis Ababa, Ethiopia</p>
+                <p class="amharic">ቦሌ ላኪ ህንፃ፣ 6ኛ ፎቅ፣ አዲስ አበባ፣ ኢትዮጵያ</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Phone Number<span class="amharic">ስልክ ቁጥር</span></h3>
+                <p><a href="tel:+251962932130">+251 962 932 130</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Email Address<span class="amharic">የኢሜይል አድራሻ</span></h3>
+                <p><a href="mailto:pappyeabsira@gmail.com">pappyeabsira@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 NUUF TRADING PLC. All Rights Reserved.</p>
+    <p class="amharic">© 2026 NUUF TRADING PLC። መብቱ በሕግ የተጠበቀ ነው።</p>
+    <p>Golden Honey and gold chipsFoods Industry</p>
+    <p class="amharic">ጎልደን ሃኒ እና ጎልድ ችፕስ የምግብ ኢንዱስትሪ</p>
+</footer>
+
+</body>
+</html>

@@ -1,10 +1,44 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Honey Foods Industry</title>
+
+    <title>Golden Honey & Gold Chips | NUUF Trading PLC</title>
+
+    <meta name="description" content="Discover Golden Honey and Gold Chips by NUUF Trading PLC. Explore our honey products, potato chips, quality standards and contact information.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        /* =========================
+           1. COLORS AND GLOBAL STYLE
+        ========================== */
+
+        :root {
+            --navy: #14283f;
+            --navy-dark: #0b1929;
+            --gold: #d9a52e;
+            --gold-light: #f7e8bc;
+            --cream: #faf8f2;
+            --white: #ffffff;
+            --text: #303b49;
+            --muted: #667384;
+            --border: #e7e4dc;
+            --green: #356b50;
+
+            --font-main: "Inter", "Noto Sans Ethiopic", sans-serif;
+            --font-amharic: "Noto Sans Ethiopic", sans-serif;
+
+            --container: 1120px;
+            --radius: 12px;
+            --shadow: 0 5px 22px rgba(20, 40, 63, 0.06);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,519 +47,1316 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #fffaf0;
-            color: #282016;
-            line-height: 1.7;
+            font-family: var(--font-main);
+            background: var(--white);
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            background: oklab(15.711% 0.00043 0.02549);
-            color: white;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 18px;
+        a {
+            color: inherit;
         }
 
-        .logo {
-            color: #f5bd42;
-            font-size: 23px;
-            font-weight: bold;
+        p {
+            margin-bottom: 14px;
         }
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #f5bd42;
+        .container {
+            width: min(var(--container), 88%);
+            margin-inline: auto;
         }
 
         .amharic {
             display: block;
-            color: #a76b13;
-            font-size: 14px;
-            font-weight: normal;
-            margin-top: 3px;
+            font-family: var(--font-amharic);
+            font-size: 0.88em;
+            font-weight: 400;
+            line-height: 1.9;
+            margin-top: 5px;
+            overflow-wrap: anywhere;
+        }
+
+        /* =========================
+           2. HEADER AND NAVIGATION
+        ========================== */
+
+        header {
+            background: var(--navy-dark);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .header-inner {
+            width: min(1280px, 92%);
+            min-height: 86px;
+            margin-inline: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            padding: 14px 0;
+        }
+
+        .logo {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.35;
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+
+        .logo small {
+            display: block;
+            color: #d8e0e9;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+
+        nav a {
+            color: #f4f6f9;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.5;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: var(--gold);
         }
 
         nav .amharic {
-            color: #f5d991;
-            font-size: 12px;
+            color: #d3dbe5;
+            font-size: 10px;
+            margin-top: 2px;
+            font-weight: 400;
         }
 
+        /* =========================
+           3. HERO SECTION
+        ========================== */
+
         .hero {
-            min-height: 430px;
-            padding: 85px 7%;
+            min-height: 520px;
+            padding: 100px 0 90px;
+            color: var(--white);
             text-align: center;
-            background: linear-gradient(
-                rgba(25, 16, 5, 0.86),
-                rgba(25, 16, 5, 0.86)
-            );
-            color: white;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            background:
+                radial-gradient(
+                    ellipse at top,
+                    rgba(217, 165, 46, 0.15),
+                    transparent 60%
+                ),
+                linear-gradient(135deg, #0b1929, #203b57);
+        }
+
+        .hero-content {
+            width: min(900px, 90%);
+            margin-inline: auto;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            color: #f5bd42;
-            font-size: clamp(32px, 5vw, 50px);
-            margin-bottom: 15px;
+            color: var(--white);
+            font-size: clamp(32px, 4.5vw, 52px);
+            font-weight: 800;
+            letter-spacing: -1.4px;
+            line-height: 1.25;
+            margin-bottom: 22px;
         }
 
-        .hero .amharic {
-            color: #ffe4a3;
+        .hero h1 .amharic {
+            color: #f4d991;
+            font-size: 0.46em;
+            letter-spacing: 0;
+            margin-top: 13px;
+        }
+
+        .hero-description {
+            max-width: 680px;
+            margin: 0 auto 20px;
+            color: #e0e7ef;
             font-size: 17px;
+            line-height: 1.9;
         }
 
-        .hero p {
-            margin: 12px 0;
+        .hero-description .amharic {
+            color: #e4e9ef;
         }
 
-        .hero .tagline {
-            color: #ffe4a3;
-            font-weight: bold;
+        .tagline {
+            color: #f6d98e;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 24px 0 0;
+        }
+
+        .tagline .amharic {
+            font-size: 12px;
         }
 
         .button {
             display: inline-block;
-            background: #f5bd42;
-            color: #211708;
-            padding: 12px 24px;
-            border-radius: 5px;
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 13px 25px;
+            margin-top: 26px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 700;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background: #edc45d;
+            transform: translateY(-2px);
         }
 
         .button .amharic {
-            color: #211708;
+            font-size: 12px;
+            margin-top: 2px;
         }
+
+        /* =========================
+           4. GENERAL SECTIONS
+        ========================== */
 
         section {
-            padding: 60px 7%;
-            scroll-margin-top: 20px;
+            padding: 76px 0;
+            scroll-margin-top: 100px;
         }
 
-        section:nth-of-type(even) {
-            background: #fff1d2;
+        .section-soft {
+            background: var(--cream);
         }
 
-        .content {
-            max-width: 1050px;
-            margin: auto;
-        }
-
-        .section-title {
-            color: #7b4a08;
+        .section-heading {
             text-align: center;
-            font-size: 30px;
-            margin-bottom: 28px;
+            max-width: 760px;
+            margin: 0 auto 42px;
         }
 
-        .section-title .amharic {
-            font-size: 17px;
-        }
-
-        .intro {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-
-        p {
-            margin-bottom: 12px;
-        }
-
-        .product-category {
-            color: #7b4a08;
-            font-size: 23px;
-            margin-top: 30px;
-        }
-
-        .product-list,
-        .quality-list,
-        .service-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .product-list li,
-        .quality-list li,
-        .service-list li {
-            background: white;
-            padding: 15px 20px;
-            margin-bottom: 12px;
-            border-left: 4px solid #e5aa2c;
-            border-radius: 5px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-[10/27/2026 8:12 PM] Film Stor: .contact-item {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ecd8ad;
-            overflow-wrap: anywhere;
-        }
-
-        .contact-item h3 {
-            color: #80500d;
+        .section-label {
+            color: var(--green);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 8px;
         }
 
-        .contact-item a {
-            color: #80500d;
+        .section-title {
+            color: var(--navy);
+            font-size: clamp(25px, 3vw, 32px);
+            font-weight: 800;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
         }
 
-        footer {
-            background: #17120b;
-            color: white;
+        .section-title .amharic {
+            color: #8a6926;
+            font-size: 0.57em;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .section-intro .amharic {
+            font-size: 13px;
+        }
+
+        .text-block {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .text-block p {
+            font-size: 15px;
+            line-height: 1.95;
+        }
+
+        .text-block .amharic {
+            color: #596574;
+            font-size: 13px;
+            margin-top: -5px;
+            margin-bottom: 22px;
+        }
+
+        /* =========================
+           5. WELCOME FEATURE
+        ========================== */
+
+        .welcome-box {
+            max-width: 900px;
+            margin: auto;
             text-align: center;
-            padding: 25px 7%;
+            padding: 36px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .welcome-box p {
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .welcome-box .amharic {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+
+        .welcome-box .amharic:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           6. COMPANY VALUES
+        ========================== */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--gold);
+        }
+
+        .value-card h3 {
+            color: var(--navy);
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        .value-card h3 .amharic {
+            color: #8a6926;
+            font-size: 13px;
+        }
+
+        .value-card p {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .value-card .amharic {
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .value-card .amharic:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           7. QUALITY AND FOOD SAFETY
+        ========================== */
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .quality-card {
+            padding: 25px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .quality-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .quality-card h3 {
+            color: var(--navy);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .quality-card h3 .amharic {
+            color: #8a6926;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .quality-card p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.85;
+        }
+
+        .quality-card p .amharic {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        .quality-note {
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: #f5f0e4;
+            border-left: 4px solid var(--gold);
+            border-radius: 5px;
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        /* =========================
+           8. PRODUCTS AND SERVICES
+        ========================== */
+
+        .product-category {
+            color: var(--navy);
+            font-size: 23px;
+            font-weight: 800;
+            margin: 42px 0 20px;
+        }
+
+        .product-category .amharic {
+            color: #8a6926;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .product-card {
+            background: var(--white);
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            border-bottom: 3px solid var(--gold);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-card h4 {
+            color: var(--navy);
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .product-card .amharic {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .flavor-card {
+            border-bottom-color: var(--green);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .service-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 19px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+        }
+
+        .service-mark {
+            display: flex;
+            flex: 0 0 30px;
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: var(--gold-light);
+            color: var(--navy);
+            font-weight: 800;
+            font-size: 15px;
+        }
+
+        .service-card h4 {
+            color: var(--navy);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .service-card .amharic {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================
+           9. CONTACT SECTION
+        ========================== */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .contact-item {
+            padding: 25px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item h3 {
+            color: var(--navy);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .contact-item h3 .amharic {
+            color: #8a6926;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .contact-item p {
+            font-size: 14px;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item .amharic {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .contact-item a {
+            color: #345d8b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           10. FOOTER
+        ========================== */
+
+        footer {
+            background: var(--navy-dark);
+            color: #dce4ed;
+            text-align: center;
+            padding: 35px 6%;
+            border-top: 3px solid var(--gold);
+        }
+
+        footer p {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        footer .company-name {
+            color: var(--gold);
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 16px;
         }
 
         footer .amharic {
-            color: #f5d991;
+            color: #cbd5df;
+            font-size: 11px;
         }
 
-        @media (max-width: 700px) {
-            header {
+        /* =========================
+           11. TABLETS
+        ========================== */
+
+        @media (max-width: 900px) {
+            .header-inner {
                 flex-direction: column;
+                gap: 15px;
+                padding: 18px 0;
+            }
+
+            .logo {
                 text-align: center;
             }
 
             nav {
                 justify-content: center;
+                gap: 12px 18px;
             }
 
-            section {
-                padding: 45px 6%;
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .hero {
-                padding: 60px 6%;
+                min-height: 460px;
+            }
+        }
+
+        /* =========================
+           12. MOBILE PHONES
+        ========================== */
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+            html {
+                scroll-padding-top: 145px;
+            }
+
+            header {
+                position: relative;
+            }
+
+            .header-inner {
+                width: 92%;
+            }
+
+            nav {
+                gap: 12px 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            nav .amharic {
+                font-size: 9px;
+            }
+
+            section {
+                padding: 52px 0;
+                scroll-margin-top: 20px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .hero {
+                min-height: 430px;
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                letter-spacing: -0.7px;
+            }
+
+            .hero h1 .amharic {
+                font-size: 15px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .tagline {
+                font-size: 12px;
+                line-height: 1.8;
+            }
+
+            .tagline .amharic {
+                font-size: 10px;
+            }
+
+            .section-heading {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+
+            .section-title .amharic {
+                font-size: 14px;
+            }
+
+            .section-intro {
+                font-size: 14px;
+            }
+
+            .welcome-box {
+                padding: 23px 18px;
+            }
+
+            .values-grid,
+            .quality-grid,
+            .product-grid,
+            .service-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card,
+            .quality-card,
+            .product-card,
+            .contact-item {
+                padding: 21px;
+            }
+
+            .product-category {
+                font-size: 20px;
+                margin-top: 32px;
+            }
+
+            .product-card h4 {
+                font-size: 14px;
+            }
+
+            .text-block p {
+                font-size: 14px;
+            }
+
+            .text-block .amharic {
+                font-size: 12px;
+            }
+        }
+
+        /* =========================
+           13. ACCESSIBILITY
+        ========================== */
+
+        a:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        
-        <span class="amharic"></span>
-    </div>
+<!-- HEADER -->
 
-    <nav>
-        <a href="#home">Home<span class="amharic">መነሻ</span></a>
-        <a href="#about">About<span class="amharic">ስለ እኛ</span></a>
-        <a href="#mission">Mission<span class="amharic">ተልዕኮ</span></a>
-        <a href="#vision">Vision<span class="amharic">ራዕይ</span></a>
-        <a href="#quality">Quality<span class="amharic">ጥራት</span></a>
-        <a href="#products">Products<span class="amharic">ምርቶች</span></a>
-        <a href="#contact">Contact<span class="amharic">ያግኙን</span></a>
-    </nav>
+<header>
+    <div class="header-inner">
+
+        <a href="#home" class="logo">
+            GOLDEN HONEY
+            <small>HONEY &amp; GOLD CHIPS</small>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home<span class="amharic">መነሻ</span></a>
+            <a href="#about">About<span class="amharic">ስለ እኛ</span></a>
+            <a href="#mission">Mission<span class="amharic">ተልዕኮ</span></a>
+            <a href="#vision">Vision<span class="amharic">ራዕይ</span></a>
+            <a href="#quality">Quality<span class="amharic">ጥራት</span></a>
+            <a href="#products">Products<span class="amharic">ምርቶች</span></a>
+            <a href="#contact">Contact<span class="amharic">ያግኙን</span></a>
+        </nav>
+
+    </div>
 </header>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
-    <h1>
-        Golden Honey &amp; Gold Chips
-        <span class="amharic">ጎልደን ሃኒ እና ጎልድ ቺፕስ</span>
-    </h1>
+    <div class="hero-content">
 
-    <p>
-        Welcome to Golden Honey Foods Industry
-        <span class="amharic">ወደ ጎልደን ሃኒ የምግብ ኢንዱስትሪ እንኳን በደህና መጡ</span>
-    </p>
+        <p class="eyebrow">NUUF TRADING PLC</p>
 
-    <p class="tagline">
-        Quality • Freshness • Food Safety • Customer Satisfaction
-        <span class="amharic">ጥራት • ትኩስነት • የምግብ ደህንነት • የደንበኛ እርካታ</span>
-    </p>
+        <h1>
+            Golden Honey &amp; Gold Chips
+            <span class="amharic">ጎልደን ሃኒ እና ጎልድ ቺፕስ</span>
+        </h1>
 
-    <a href="#products" class="button">
-        Explore Our Products
-        <span class="amharic">ምርቶቻችንን ይመልከቱ</span>
-    </a>
-</section>
-
-<section id="welcome">
-    <div class="content intro">
-        <h2 class="section-title">
-            Welcome to Our Company
-            <span class="amharic">ወደ ድርጅታችን እንኳን በደህና መጡ</span>
-        </h2>
-
-        <p>
-            Golden Honey Foods Industry is committed to providing quality
-            honey products and delicious potato chips to our customers.
-        </p>
-        <p class="amharic">
-            ጎልደን ሃኒ የምግብ ኢንዱስትሪ ጥራት ያላቸውን የማር ምርቶች
-            እና ጣፋጭ የድንች ቺፕሶችን ለደንበኞቹ ለማቅረብ ቁርጠኛ ነው።
+        <p class="hero-description">
+            Welcome to Golden Honey Foods Industry.
+            We are committed to quality honey products, delicious potato chips,
+            hygienic production and customer satisfaction.
+            <span class="amharic">
+                ወደ ጎልደን ሃኒ የምግብ ኢንዱስትሪ እንኳን በደህና መጡ።
+                ጥራት ያላቸውን የማር ምርቶችና ጣፋጭ የድንች ቺፕሶችን
+                ለማቅረብ ቁርጠኛ ነን።
+            </span>
         </p>
 
-        <p>
-            We focus on product quality, hygienic production, customer
-            satisfaction, and continuous improvement.
+        <p class="tagline">
+            Quality • Freshness • Food Safety • Customer Satisfaction
+            <span class="amharic">
+                ጥራት • ትኩስነት • የምግብ ደህንነት • የደንበኛ እርካታ
+            </span>
         </p>
-        <p class="amharic">
-            በምርት ጥራት፣ በንጽህና የተሞላ የምርት ሂደት፣ በደንበኛ እርካታ
-            እና በቀጣይነት ማሻሻያ ላይ እናተኩራለን።
-        </p>
+
+        <a href="#products" class="button">
+            Explore Our Products
+            <span class="amharic">ምርቶቻችንን ይመልከቱ</span>
+        </a>
+
     </div>
 </section>
+
+<!-- WELCOME -->
+
+<section id="welcome" class="section-soft">
+    <div class="container">
+
+        <div class="welcome-box">
+
+            <div class="section-heading">
+                <h2 class="section-title">
+                    Welcome to Our Company
+                    <span class="amharic">ወደ ድርጅታችን እንኳን በደህና መጡ</span>
+                </h2>
+            </div>
+
+            <p>
+                Golden Honey Foods Industry is committed to providing quality
+                honey products and delicious potato chips to our customers.
+            </p>
+
+            <p class="amharic">
+                ጎልደን ሃኒ የምግብ ኢንዱስትሪ ጥራት ያላቸውን የማር ምርቶች
+                እና ጣፋጭ የድንች ቺፕሶችን ለደንበኞቹ ለማቅረብ ቁርጠኛ ነው።
+            </p>
+
+            <p>
+                We focus on product quality, hygienic production, customer
+                satisfaction, and continuous improvement.
+            </p>
+
+            <p class="amharic">
+                በምርት ጥራት፣ በንጽህና የተሞላ የምርት ሂደት፣ በደንበኛ
+                እርካታ እና በቀጣይነት ማሻሻያ ላይ እናተኩራለን።
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
 
 <section id="about">
-    <div class="content">
-        <h2 class="section-title">
-            About Us
-            <span class="amharic">ስለ እኛ</span>
-        </h2>
+    <div class="container">
 
-        <p>
-            Golden Honey Foods Industry operates under NUUF Trading PLC
-            and focuses on producing honey products and potato chips.
-        </p>
-        <p class="amharic">
-            ጎልደን ሃኒ የምግብ ኢንዱስትሪ በNUUF Trading PLC ስር የሚሰራ
-            ሲሆን የማር ምርቶችን እና የድንች ቺፕሶችን በማምረት ላይ ያተኩራል።
-        </p>
+        <div class="section-heading">
+            <p class="section-label">Our Company</p>
+            <h2 class="section-title">
+                About Us
+                <span class="amharic">ስለ እኛ</span>
+            </h2>
+        </div>
 
-        <p>
-            Our goal is to deliver reliable products that meet customer
-            expectations while maintaining hygiene and quality throughout
-            our production processes.
-        </p>
-        <p class="amharic">
-            ዓላማችን በምርት ሂደታችን ውስጥ ንጽህናንና ጥራትን በመጠበቅ
-            የደንበኞችን ፍላጎት የሚያሟሉ አስተማማኝ ምርቶችን ማቅረብ ነው።
-        </p>
+        <div class="text-block">
+
+            <p>
+                Golden Honey Foods Industry operates under NUUF Trading PLC
+                and focuses on producing honey products and potato chips.
+            </p>
+
+            <p class="amharic">
+                ጎልደን ሃኒ የምግብ ኢንዱስትሪ በNUUF Trading PLC ስር የሚሰራ
+                ሲሆን የማር ምርቶችን እና የድንች ቺፕሶችን በማምረት ላይ ያተኩራል።
+            </p>
+
+            <p>
+                Our goal is to deliver reliable products that meet customer
+                expectations while maintaining hygiene and quality throughout
+                our production processes.
+            </p>
+
+            <p class="amharic">
+                ዓላማችን በምርት ሂደታችን ውስጥ ንጽህናንና ጥራትን በመጠበቅ
+                የደንበኞችን ፍላጎት የሚያሟሉ አስተማማኝ ምርቶችን ማቅረብ ነው።
+            </p>
+
+        </div>
+
     </div>
 </section>
-<section id="mission">
-    <div class="content">
-        <h2 class="section-title">
-            Our Mission
-            <span class="amharic">ተልዕኳችን</span>
-        </h2>
 
-        <p>
-            To produce and supply quality honey products and potato chips
-            through hygienic manufacturing, responsible operations, and
-            a commitment to customer satisfaction.
-        </p>
-        <p class="amharic">
-            በንጽህና የተሞላ የማምረት ሂደት፣ በኃላፊነት የሚከናወኑ ሥራዎች
-            እና ለደንበኛ እርካታ ባለን ቁርጠኝነት ጥራት ያላቸውን የማር ምርቶችና
-            የድንች ቺፕሶችን ማምረትና ማቅረብ።
-        </p>
+<!-- MISSION -->
+
+<section id="mission" class="section-soft">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="section-label">Our Purpose</p>
+            <h2 class="section-title">
+                Our Mission
+                <span class="amharic">ተልዕኳችን</span>
+            </h2>
+        </div>
+
+        <div class="text-block">
+
+            <p>
+                To produce and supply quality honey products and potato chips
+                through hygienic manufacturing, responsible operations, and
+                a commitment to customer satisfaction.
+            </p>
+
+            <p class="amharic">
+                በንጽህና የተሞላ የማምረት ሂደት፣ በኃላፊነት የሚከናወኑ
+                ሥራዎች እና ለደንበኛ እርካታ ባለን ቁርጠኝነት ጥራት ያላቸውን
+                የማር ምርቶችና የድንች ቺፕሶችን ማምረትና ማቅረብ።
+            </p>
+
+        </div>
+
     </div>
 </section>
+
+<!-- VISION -->
 
 <section id="vision">
-    <div class="content">
-        <h2 class="section-title">
-            Our Vision
-            <span class="amharic">ራዕያችን</span>
-        </h2>
+    <div class="container">
 
-        <p>
-            To become a trusted food manufacturing company recognized
-            for product quality, food safety, innovation, and customer care.
-        </p>
-        <p class="amharic">
-            በምርት ጥራት፣ በምግብ ደህንነት፣ በፈጠራ እና በደንበኛ እንክብካቤ
-            የሚታወቅ ታማኝ የምግብ ማምረቻ ድርጅት መሆን።
-        </p>
+        <div class="section-heading">
+            <p class="section-label">Our Future</p>
+            <h2 class="section-title">
+                Our Vision
+                <span class="amharic">ራዕያችን</span>
+            </h2>
+        </div>
+
+        <div class="text-block">
+
+            <p>
+                To become a trusted food manufacturing company recognized
+                for product quality, food safety, innovation, and customer care.
+            </p>
+
+            <p class="amharic">
+                በምርት ጥራት፣ በምግብ ደህንነት፣ በፈጠራ እና በደንበኛ
+                እንክብካቤ የሚታወቅ ታማኝ የምግብ ማምረቻ ድርጅት መሆን።
+            </p>
+
+        </div>
+
     </div>
 </section>
 
-<section id="quality">
-    <div class="content">
-        <h2 class="section-title">
-            Quality &amp; Food Safety
-            <span class="amharic">ጥራት እና የምግብ ደህንነት</span>
-        </h2>
+<!-- QUALITY AND FOOD SAFETY -->
 
-        <p>
-            We are committed to maintaining hygienic production practices,
-            monitoring product quality, and improving food safety procedures.
-        </p>
-        <p class="amharic">
-            ንጽህናን የጠበቀ የምርት አሠራርን ለመጠበቅ፣ የምርት ጥራትን
-            ለመቆጣጠር እና የምግብ ደህንነት ሂደቶችን ለማሻሻል ቁርጠኛ ነን።
-        </p>
+<section id="quality" class="section-soft">
+    <div class="container">
 
-        <ul class="quality-list">
-            <li>
-                <strong>HACCP - Hazard Analysis and Critical Control Points</strong>
-                <span class="amharic">HACCP፦ የአደጋ ትንተና እና ወሳኝ የቁጥጥር ነጥቦች</span>
-                <p>Identifying and controlling potential food safety hazards.</p>
-                <p class="amharic">ሊከሰቱ የሚችሉ የምግብ ደህንነት አደጋዎችን መለየትና መቆጣጠር።</p>
-            </li>
+        <div class="section-heading">
+            <p class="section-label">Our Commitment</p>
+            <h2 class="section-title">
+                Quality &amp; Food Safety
+                <span class="amharic">ጥራት እና የምግብ ደህንነት</span>
+            </h2>
 
-            <li>
-                <strong>GMP - Good Manufacturing Practices</strong>
-                <span class="amharic">GMP፦ ጥሩ የማምረት አሠራር</span>
-                <p>Maintaining cleanliness, proper handling, and organized production.</p>
-                <p class="amharic">ንጽህናን፣ ተገቢ አያያዝን እና የተደራጀ የምርት ሂደትን መጠበቅ።</p>
-            </li>
+            <p class="section-intro">
+                We are committed to maintaining hygienic production practices,
+                monitoring product quality, and improving food safety procedures.
+                <span class="amharic">
+                    ንጽህናን የጠበቀ የምርት አሠራርን ለመጠበቅ፣ የምርት
+                    ጥራትን ለመቆጣጠር እና የምግብ ደህንነት ሂደቶችን
+                    ለማሻሻል ቁርጠኛ ነን።
+                </span>
+            </p>
+        </div>
 
-            <li>
-                <strong>ISO 22000 - Food Safety Management System</strong>
-                <span class="amharic">ISO 22000፦ የምግብ ደህንነት አስተዳደር ሥርዓት</span>
-                <p>A framework for managing food safety throughout the food chain.</p>
-                <p class="amharic">በምግብ አቅርቦት ሰንሰለት ውስጥ የምግብ ደህንነትን ለማስተዳደር የሚረዳ ሥርዓት።</p>
-            </li>
+        <div class="quality-grid">
 
-            <li>
-                <strong>Quality Control</strong>
-                <span class="amharic">የጥራት ቁጥጥር</span>
-                <p>Checking raw materials, production processes, and finished products.</p>
-                <p class="amharic">ጥሬ ዕቃዎችን፣ የምርት ሂደቶችን እና የተጠናቀቁ ምርቶችን መፈተሽ።</p>
-            </li>
+            <article class="quality-card">
+                <h3>
+                    HACCP - Hazard Analysis and Critical Control Points
+                    <span class="amharic">
+                        HACCP፦ የአደጋ ትንተና እና ወሳኝ የቁጥጥር ነጥቦች
+                    </span>
+                </h3>
+                <p>
+                    Identifying and controlling potential food safety hazards.
+                    <span class="amharic">
+                        ሊከሰቱ የሚችሉ የምግብ ደህንነት አደጋዎችን መለየትና መቆጣጠር።
+                    </span>
+                </p>
+            </article>
 
-            <li>
-                <strong>Food Hygiene and Safety</strong>
-                <span class="amharic">የምግብ ንጽህና እና ደህንነት</span>
-                <p>Promoting safe food handling and hygienic working conditions.</p>
-                <p class="amharic">ደህንነቱ የተጠበቀ የምግብ አያያዝንና ንጹህ የሥራ አካባቢን ማስፋፋት።</p>
-            </li>
-        </ul>
+            <article class="quality-card">
+                <h3>
+                    GMP - Good Manufacturing Practices
+                    <span class="amharic">GMP፦ ጥሩ የማምረት አሠራር</span>
+                </h3>
+                <p>
+                    Maintaining cleanliness, proper handling, and organized production.
+                    <span class="amharic">
+                        ንጽህናን፣ ተገቢ አያያዝን እና የተደራጀ የምርት ሂደትን መጠበቅ።
+                    </span>
+                </p>
+            </article>
+
+            <article class="quality-card">
+                <h3>
+                    ISO 22000 - Food Safety Management System
+                    <span class="amharic">
+                        ISO 22000፦ የምግብ ደህንነት አስተዳደር ሥርዓት
+                    </span>
+                </h3>
+                <p>
+                    A framework for managing food safety throughout the food chain.
+                    <span class="amharic">
+                        በምግብ አቅርቦት ሰንሰለት ውስጥ የምግብ ደህንነትን
+                        ለማስተዳደር የሚረዳ ሥርዓት።
+                    </span>
+                </p>
+            </article>
+
+            <article class="quality-card">
+                <h3>
+                    Quality Control
+                    <span class="amharic">የጥራት ቁጥጥር</span>
+                </h3>
+                <p>
+                    Checking raw materials, production processes, and finished products.
+                    <span class="amharic">
+                        ጥሬ ዕቃዎችን፣ የምርት ሂደቶችን እና የተጠናቀቁ ምርቶችን መፈተሽ።
+                    </span>
+                </p>
+            </article>
+
+            <article class="quality-card">
+                <h3>
+                    Food Hygiene and Safety
+                    <span class="amharic">የምግብ ንጽህና እና ደህንነት</span>
+                </h3>
+                <p>
+                    Promoting safe food handling and hygienic working conditions.
+                    <span class="amharic">
+                        ደህንነቱ የተጠበቀ የምግብ አያያዝንና ንጹህ የሥራ አካባቢን ማስፋፋት።
+                    </span>
+                </p>
+            </article>
+
+        </div>
+
+        <div class="quality-note">
+            Our commitment is to continuous improvement in food safety and quality.
+            <span class="amharic">
+                በምግብ ደህንነትና ጥራት ላይ በቀጣይነት ለመሻሻል ቁርጠኛ ነን።
+            </span>
+        </div>
+
     </div>
 </section>
+
+<!-- PRODUCTS -->
 
 <section id="products">
-    <div class="content">
-        <h2 class="section-title">
-            Our Products
-            <span class="amharic">ምርቶቻችን</span>
-        </h2>
+    <div class="container">
 
-        <p class="intro">
-            We offer honey products in different sizes and delicious Gold Chips
-            to serve different customer needs.
-        </p>
-        <p class="amharic intro">
-            የተለያዩ የማር ምርቶችን በተለያዩ መጠኖች እና ጣፋጭ ጎልድ ቺፕሶችን
-            የደንበኞችን የተለያዩ ፍላጎቶች ለማሟላት እናቀርባለን።
-        </p>
+        <div class="section-heading">
+            <p class="section-label">What We Make</p>
+            <h2 class="section-title">
+                Our Products
+                <span class="amharic">ምርቶቻችን</span>
+            </h2>
+
+            <p class="section-intro">
+                We offer honey products in different sizes and delicious Gold Chips
+                to serve different customer needs.
+                <span class="amharic">
+                    የተለያዩ የማር ምርቶችን በተለያዩ መጠኖች እና ጣፋጭ
+                    ጎልድ ቺፕሶችን ለደንበኞች እናቀርባለን።
+                </span>
+            </p>
+        </div>
 
         <h3 class="product-category">
             Golden Honey Products
             <span class="amharic">የጎልደን ሃኒ ምርቶች</span>
         </h3>
- <ul class="product-list">
-            <li>100 g Honey Bottle<span class="amharic">100 ግራም የማር ጠርሙስ</span></li>
-            <li>500 g Honey Bottle<span class="amharic">500 ግራም የማር ጠርሙስ</span></li>
-            <li>500 g Premium Honey<span class="amharic">500 ግራም ፕሪሚየም ማር</span></li>
-            <li>500 g Squeeze Honey<span class="amharic">500 ግራም በመጭመቅ የሚወጣ ማር</span></li>
-            <li>1 kg Honey<span class="amharic">1 ኪሎ ግራም ማር</span></li>
-            <li>3 kg Honey<span class="amharic">3 ኪሎ ግራም ማር</span></li>
-            <li>5 kg Honey<span class="amharic">5 ኪሎ ግራም ማር</span></li>
-        </ul>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <h4>100 g Honey Bottle</h4>
+                <span class="amharic">100 ግራም የማር ጠርሙስ</span>
+            </article>
+
+            <article class="product-card">
+                <h4>500 g Honey Bottle</h4>
+                <span class="amharic">500 ግራም የማር ጠርሙስ</span>
+            </article>
+
+            <article class="product-card">
+                <h4>500 g Premium Honey</h4>
+                <span class="amharic">500 ግራም ፕሪሚየም ማር</span>
+            </article>
+
+            <article class="product-card">
+                <h4>500 g Squeeze Honey</h4>
+                <span class="amharic">500 ግራም በመጭመቅ የሚወጣ ማር</span>
+            </article>
+
+            <article class="product-card">
+                <h4>1 kg Honey</h4>
+                <span class="amharic">1 ኪሎ ግራም ማር</span>
+            </article>
+
+            <article class="product-card">
+                <h4>3 kg Honey</h4>
+                <span class="amharic">3 ኪሎ ግራም ማር</span>
+            </article>
+
+            <article class="product-card">
+                <h4>5 kg Honey</h4>
+                <span class="amharic">5 ኪሎ ግራም ማር</span>
+            </article>
+
+        </div>
 
         <h3 class="product-category">
             Gold Chips
             <span class="amharic">ጎልድ ቺፕስ</span>
         </h3>
 
-        <ul class="product-list">
-            <li>Gold Chips - 65 g<span class="amharic">ጎልድ ቺፕስ - 65 ግራም</span></li>
-            <li>Gold Chips - 120 g<span class="amharic">ጎልድ ቺፕስ - 120 ግራም</span></li>
-            <li>Onion Flavor<span class="amharic">የሽንኩርት ጣዕም</span></li>
-            <li>Tomato Flavor<span class="amharic">የቲማቲም ጣዕም</span></li>
-            <li>Peri-Peri Flavor<span class="amharic">የበርበሬ ጣዕም</span></li>
-        </ul>
+        <div class="product-grid">
+
+            <article class="product-card">
+                <h4>Gold Chips - 65 g</h4>
+                <span class="amharic">ጎልድ ቺፕስ - 65 ግራም</span>
+            </article>
+
+            <article class="product-card">
+                <h4>Gold Chips - 120 g</h4>
+                <span class="amharic">ጎልድ ቺፕስ - 120 ግራም</span>
+            </article>
+
+        </div>
+
+        <h3 class="product-category">
+            Available Flavors
+            <span class="amharic">ያሉ የጣዕም አይነቶች</span>
+        </h3>
+
+        <div class="product-grid">
+
+            <article class="product-card flavor-card">
+                <h4>Onion Flavor</h4>
+                <span class="amharic">የሽንኩርት ጣዕም</span>
+            </article>
+
+            <article class="product-card flavor-card">
+                <h4>Tomato Flavor</h4>
+                <span class="amharic">የቲማቲም ጣዕም</span>
+            </article>
+
+            <article class="product-card flavor-card">
+                <h4>Peri-Peri Flavor</h4>
+                <span class="amharic">የበርበሬ ጣዕም</span>
+            </article>
+
+        </div>
 
         <h3 class="product-category">
             Our Services
             <span class="amharic">አገልግሎቶቻችን</span>
         </h3>
 
-        <ul class="service-list">
-            <li>Honey Processing and Packaging<span class="amharic">የማር ማቀነባበር እና ማሸግ</span></li>
-            <li>Potato Chips Manufacturing<span class="amharic">የድንች ቺፕስ ማምረት</span></li>
-            <li>Product Quality Control<span class="amharic">የምርት ጥራት ቁጥጥር</span></li>
-            <li>Hygienic Production Practices<span class="amharic">ንጽህናን የጠበቀ የምርት አሠራር</span></li>
-        </ul>
+        <div class="service-grid">
+
+            <article class="service-card">
+                <span class="service-mark" aria-hidden="true">✓</span>
+                <div>
+                    <h4>Honey Processing and Packaging</h4>
+                    <span class="amharic">የማር ማቀነባበር እና ማሸግ</span>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-mark" aria-hidden="true">✓</span>
+                <div>
+                    <h4>Potato Chips Manufacturing</h4>
+                    <span class="amharic">የድንች ቺፕስ ማምረት</span>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-mark" aria-hidden="true">✓</span>
+                <div>
+                    <h4>Product Quality Control</h4>
+                    <span class="amharic">የምርት ጥራት ቁጥጥር</span>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <span class="service-mark" aria-hidden="true">✓</span>
+                <div>
+                    <h4>Hygienic Production Practices</h4>
+                    <span class="amharic">ንጽህናን የጠበቀ የምርት አሠራር</span>
+                </div>
+            </article>
+
+        </div>
+
     </div>
 </section>
 
-<section id="contact">
-    <div class="content">
-        <h2 class="section-title">
-            Contact Us
-            <span class="amharic">ያግኙን</span>
-        </h2>
+<!-- CONTACT -->
 
-        <p class="intro">
-            Contact us for product information, business inquiries, and further details.
-        </p>
-        <p class="amharic intro">
-            ስለ ምርቶቻችን መረጃ፣ ለንግድ ጥያቄዎች እና ለተጨማሪ ዝርዝሮች ያግኙን።
-        </p>
+<section id="contact" class="section-soft">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="section-label">Get in Touch</p>
+            <h2 class="section-title">
+                Contact Us
+                <span class="amharic">ያግኙን</span>
+            </h2>
+
+            <p class="section-intro">
+                Contact us for product information, business inquiries,
+                and further details.
+                <span class="amharic">
+                    ስለ ምርቶቻችን መረጃ፣ ለንግድ ጥያቄዎች እና ለተጨማሪ
+                    ዝርዝሮች ያግኙን።
+                </span>
+            </p>
+        </div>
 
         <div class="contact-grid">
-            <div class="contact-item">
-                <h3>Company Location<span class="amharic">የድርጅቱ አድራሻ</span></h3>
+
+            <article class="contact-item">
+                <h3>
+                    Company Location
+                    <span class="amharic">የድርጅቱ አድራሻ</span>
+                </h3>
                 <p>Addis Ababa, Ethiopia</p>
                 <p class="amharic">አዲስ አበባ፣ ኢትዮጵያ</p>
-            </div>
+            </article>
 
-            <div class="contact-item">
-                <h3>Production Location<span class="amharic">የምርት ቦታ</span></h3>
+            <article class="contact-item">
+                <h3>
+                    Production Location
+                    <span class="amharic">የምርት ቦታ</span>
+                </h3>
                 <p>Kality Sub City, Addis Ababa, Ethiopia</p>
                 <p class="amharic">ኮየ ፈጨ ገራን ጉላ፣ አዲስ አበባ፣ ኢትዮጵያ</p>
-            </div>
+            </article>
 
-            <div class="contact-item">
-                <h3>Showroom<span class="amharic">የሽያጭ ማሳያ ቦታ</span></h3>
+            <article class="contact-item">
+                <h3>
+                    Showroom
+                    <span class="amharic">የሽያጭ ማሳያ ቦታ</span>
+                </h3>
                 <p>Bole Luky Building, 6th Floor, Addis Ababa, Ethiopia</p>
                 <p class="amharic">ቦሌ ላኪ ህንፃ፣ 6ኛ ፎቅ፣ አዲስ አበባ፣ ኢትዮጵያ</p>
-            </div>
+            </article>
 
-            <div class="contact-item">
-                <h3>Phone Number<span class="amharic">ስልክ ቁጥር</span></h3>
-                <p><a href="tel:+251962932130">+251 962 932 130</a></p>
-            </div>
+            <article class="contact-item">
+                <h3>
+                    Phone Number
+                    <span class="amharic">ስልክ ቁጥር</span>
+                </h3>
+                <p>
+                    <a href="tel:+251962932130">+251 962 932 130</a>
+                </p>
+            </article>
 
-            <div class="contact-item">
-                <h3>Email Address<span class="amharic">የኢሜይል አድራሻ</span></h3>
-                <p><a href="mailto:pappyeabsira@gmail.com">pappyeabsira@gmail.com</a></p>
-            </div>
+            <article class="contact-item">
+                <h3>
+                    Email Address
+                    <span class="amharic">የኢሜይል አድራሻ</span>
+                </h3>
+                <p>
+                    <a href="mailto:pappyeabsira@gmail.com">
+                        pappyeabsira@gmail.com
+                    </a>
+                </p>
+            </article>
+
         </div>
+
     </div>
 </section>
+
+<!-- FOOTER -->
 
 <footer>
     <p>© 2026 NUUF TRADING PLC. All Rights Reserved.</p>
-    <p class="amharic">© 2026 NUUF TRADING PLC። መብቱ በሕግ የተጠበቀ ነው።</p>
-    <p>Golden Honey and gold chipsFoods Industry</p>
-    <p class="amharic">ጎልደን ሃኒ እና ጎልድ ችፕስ የምግብ ኢንዱስትሪ</p>
+
+    <p class="amharic">
+        © 2026 NUUF TRADING PLC። መብቱ በሕግ የተጠበቀ ነው።
+    </p>
+
+    <p class="company-name">Golden Honey &amp; Gold Chips Foods Industry</p>
+
+    <p class="amharic">
+        ጎልደን ሃኒ እና ጎልድ ቺፕስ የምግብ ኢንዱስትሪ
+    </p>
 </footer>
 
 </body>
